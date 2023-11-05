@@ -1,0 +1,333 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 9,
+    "passes": 9,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-11-05T17:12:20.880Z",
+    "end": "2023-11-05T17:12:21.957Z",
+    "duration": 1077,
+    "testsRegistered": 9,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e64e441e-2b00-4660-a064-3341552a1271",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "193388b4-11ec-475f-a48d-b943485da7da",
+          "title": "GET test suite",
+          "fullFile": "C:\\Users\\Teodor Stan\\Desktop\\Test\\FirstProject\\nodeJS-tests\\tests\\get-test.js",
+          "file": "\\tests\\get-test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"GET test suite\"",
+              "fullTitle": "GET test suite \"before all\" hook in \"GET test suite\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request.setDefaultTimeout(10000);",
+              "err": {},
+              "uuid": "0353def6-6062-4cdc-92de-818761fdedd4",
+              "parentUUID": "193388b4-11ec-475f-a48d-b943485da7da",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "List users",
+              "fullTitle": "GET test suite List users",
+              "timedOut": false,
+              "duration": 180,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await spec()\n  .get(\"https://reqres.in/api/users\")\n  .expectStatus(200)\n  .expectJsonSchema(getUsersSchema)\n  .inspect();",
+              "err": {},
+              "uuid": "05a40fb4-ab09-4a0f-b2e2-e4a0617b2c80",
+              "parentUUID": "193388b4-11ec-475f-a48d-b943485da7da",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Single user",
+              "fullTitle": "GET test suite Single user",
+              "timedOut": false,
+              "duration": 27,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await spec()\n  .get(\"https://reqres.in/api/users?id=5\")\n  .expectStatus(200)\n  .expectResponseTime(100)\n  .inspect();",
+              "err": {},
+              "uuid": "3a7fb376-dab4-491d-be4f-0ce5cf55b89a",
+              "parentUUID": "193388b4-11ec-475f-a48d-b943485da7da",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Single user not found",
+              "fullTitle": "GET test suite Single user not found",
+              "timedOut": false,
+              "duration": 133,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await spec().get(\"https://reqres.in/api/users/23\").expectStatus(404);",
+              "err": {},
+              "uuid": "cfedc8cb-29b2-4db2-a9c4-178332bef89e",
+              "parentUUID": "193388b4-11ec-475f-a48d-b943485da7da",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "List resource",
+              "fullTitle": "GET test suite List resource",
+              "timedOut": false,
+              "duration": 28,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await spec()\n  .get(\"https://reqres.in/api/unknown\")\n  .inspect()\n  .expectBodyContains(\"per_page\");",
+              "err": {},
+              "uuid": "7b7c3b37-2be4-4f87-a794-ab02e56bb98b",
+              "parentUUID": "193388b4-11ec-475f-a48d-b943485da7da",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "05a40fb4-ab09-4a0f-b2e2-e4a0617b2c80",
+            "3a7fb376-dab4-491d-be4f-0ce5cf55b89a",
+            "cfedc8cb-29b2-4db2-a9c4-178332bef89e",
+            "7b7c3b37-2be4-4f87-a794-ab02e56bb98b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 368,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "6b01e187-56cf-4188-9fa1-cfcd36506377",
+          "title": "Post test suite",
+          "fullFile": "C:\\Users\\Teodor Stan\\Desktop\\Test\\FirstProject\\nodeJS-tests\\tests\\post-test.js",
+          "file": "\\tests\\post-test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Post test suite\"",
+              "fullTitle": "Post test suite \"before all\" hook in \"Post test suite\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request.setDefaultTimeout(10000);",
+              "err": {},
+              "uuid": "86263eeb-de3e-4180-95da-a39298826855",
+              "parentUUID": "6b01e187-56cf-4188-9fa1-cfcd36506377",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Register unsuccessful with random email ",
+              "fullTitle": "Post test suite Register unsuccessful with random email ",
+              "timedOut": false,
+              "duration": 157,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(\"The generated email is \" + randomEmail + \" for \" + randomName);\nawait spec()\n  .post(baseUrl + \"api/register\")\n  .withBody({\n    email: randomEmail,\n    password: \"pistol\",\n  })\n  .expectStatus(400);",
+              "err": {},
+              "uuid": "ab39a974-beab-4133-8f7b-56e7e1f41017",
+              "parentUUID": "6b01e187-56cf-4188-9fa1-cfcd36506377",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create user ",
+              "fullTitle": "Post test suite Create user ",
+              "timedOut": false,
+              "duration": 128,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await spec()\n  .post(\"https://reqres.in/api/users\")\n  .withBody({\n    name: randomName,\n    job: randomJob,\n  })\n  .expectStatus(201);",
+              "err": {},
+              "uuid": "c534336c-3ef0-4ec8-a5ea-30158f3deb61",
+              "parentUUID": "6b01e187-56cf-4188-9fa1-cfcd36506377",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Register successful ",
+              "fullTitle": "Post test suite Register successful ",
+              "timedOut": false,
+              "duration": 140,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await spec()\n  .post(\"https://reqres.in/api/register\")\n  .withBody({\n    email: \"eve.holt@reqres.in\",\n    password: \"pistol\",\n  })\n  .inspect()\n  .expectStatus(200)\n  .expectBodyContains(\"token\");",
+              "err": {},
+              "uuid": "fc4f254b-75f2-4160-80d2-4d80ba792ef0",
+              "parentUUID": "6b01e187-56cf-4188-9fa1-cfcd36506377",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Register unsuccessful with correct error ",
+              "fullTitle": "Post test suite Register unsuccessful with correct error ",
+              "timedOut": false,
+              "duration": 130,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await spec()\n  .post(\"https://reqres.in/api/register\")\n  .withBody({\n    email: \"eve.holt@reqres.in\",\n  })\n  .expectStatus(400)\n  .expectBody({\n    error: \"Missing password\",\n  })\n  .inspect();",
+              "err": {},
+              "uuid": "99fc70f9-9965-41ba-a95b-ed50f425043a",
+              "parentUUID": "6b01e187-56cf-4188-9fa1-cfcd36506377",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ab39a974-beab-4133-8f7b-56e7e1f41017",
+            "c534336c-3ef0-4ec8-a5ea-30158f3deb61",
+            "fc4f254b-75f2-4160-80d2-4d80ba792ef0",
+            "99fc70f9-9965-41ba-a95b-ed50f425043a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 555,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        },
+        {
+          "uuid": "7fa4681e-c2f4-4000-bb0a-8c028ceb7b0a",
+          "title": "Put test suite case",
+          "fullFile": "C:\\Users\\Teodor Stan\\Desktop\\Test\\FirstProject\\nodeJS-tests\\tests\\put-test.js",
+          "file": "\\tests\\put-test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Update email of user 3",
+              "fullTitle": "Put test suite case Update email of user 3",
+              "timedOut": false,
+              "duration": 148,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await spec()\n  .put(\"https://reqres.in/api/users/5\")\n  .withBody({\n    name: \"newName\",\n    job: randomJob,\n  })\n  .expectStatus(200)\n  .inspect();",
+              "err": {},
+              "uuid": "a145cad2-7db0-40a1-82cd-27a4928a9e5d",
+              "parentUUID": "7fa4681e-c2f4-4000-bb0a-8c028ceb7b0a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a145cad2-7db0-40a1-82cd-27a4928a9e5d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 148,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 10000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 10000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "actualresult",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "results",
+        "reportFilename": "actualresult"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
