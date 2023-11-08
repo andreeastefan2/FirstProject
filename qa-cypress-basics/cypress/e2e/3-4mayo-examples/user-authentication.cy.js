@@ -5,9 +5,10 @@ describe("QA Practice login", () => {
     cy.visit("https://qa-practice.netlify.app");
     cy.get("a").contains("Forms").click();
     cy.get("#login").click();
-    cy.get("#email").type("admin@admin.com");
+    cy.get("#email").type("admin@admin.com",{delay:0});
     cy.get("#password").type("admin123");
     cy.get("button").contains("Submit").click();
     cy.get("#logout").should('be.visible');
   })
+
 });
