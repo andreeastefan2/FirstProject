@@ -7,7 +7,7 @@ describe("Registration test suites", () => {
     });
     
     it("Register test", () => {
-      cy.get("#firstName").type.(faker.person.firstName());
+      cy.get("#firstName").type(faker.person.firstName());
       cy.get("#emailAdress").type(faker.internet.email());
       cy.get("#password").type(faker.internet.password());
       cy.get("button").contains("Register").click();
